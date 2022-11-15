@@ -1,7 +1,7 @@
 ---
 title: |
   | Graphical Economics
-  | (with Resale)
+  | Kakade, Kearns, Ortiz
 author: |
   | Carlos Lezama
 date: |
@@ -97,20 +97,120 @@ $$
   - Every pair of agents can trade
   - Markets are cleared when the demand of all agents is equal to the supply of all agents
 
+---
+
 \centering
 ![](fig/1.png){width=30%}
 
 > We would like something more **local**
 
+\centering
+![](fig/2.png){width=60%}
+
 # The Kakade, Kearns, Ortiz (KKO) Exchange Model
 
-Text.
+---
 
-# Allowing Resale
+### KKO Equilibrium
 
-Text.
+An **KKO Equilibrium** is a pair $(\mathbf{p}, \mathbf{x})$ of prices $\mathbf{p} \in \R^{m \times \ell}$ and consumption plans $\mathbf{x} \in \R^{m \times m \times \ell}$ such that the following conditions are satisfied for all $i \in [m]$:
 
-<!--
+- *Local Clearing.*
+
+$$
+\sum_{j \simeq i} \mathbf{x}^{ji} = \mathbf{e}^i
+$$
+
+- *Individual Rationality.* Setting $\hat{\mathbf{x}}^i = \mathbf{x}^i$ maximizes their utility $u_i \left( \sum_{j \simeq i} \hat{\mathbf{x}}^{ij} \right)$ over all $\hat{\mathbf{x}}^i \in \R^{m \times \ell}_+$ satisfying
+
+$$
+\sum_{j \simeq i} \mathbf{p}^j \cdot \hat{\mathbf{x}}^{ij} \leq \mathbf{p}^i \cdot \mathbf{e}^i
+$$
+
+---
+
+- Network of local markets
+  - Each agent sets its own price for each good
+  - Pairs of agents can trade if connected by an edge
+  - Markets are cleared when the demand of each agent is equal to the supply of each agent
+- Captures underlying trade structures of economies
+- Can be too local in some cases
+
+## Local prices
+
 \centering
 ![](fig/3.png){width=70%}
--->
+
+\begin{align*}
+\mathbf{e}^1 = (1, 2) && \mathbf{e}^2 = (1, 1) && \mathbf{e}^3 = (2, 1) \\
+\mathbf{u}^1 = (1, 0) && \mathbf{u}^2 = (1, 1) && \mathbf{u}^3 = (0, 1) \\
+\mathbf{p}^1 = (2, 1) && \mathbf{p}^2 = (2, 2) && \mathbf{p}^3 = (1, 2)
+\end{align*}
+
+> There is **no** graphical equilibrium in which the prices for both goods is the same from all consumers, so price variations are essential for equilibrium
+
+# Graphical Equilibrium Existence
+
+---
+
+### Assumptions
+
+**A-1.** For all consumers $i$, the utility function $u_i$ satisfies the following three properties:
+
+- continuity
+- strict monotonicity
+- quasi-concavity
+
+**A-2.** (Non-Zero Endowments) For each consumer $i$ and good $k$, $e^i_k > 0$
+
+---
+
+### Graphical Quasi-Equilibrium
+
+An **graphical quasi-equilibrium** is a set of globally normalized prices (i.e., $\sum_{i, k} p^{ik} = 1$) and a set of consumption plans in which the local markets clear for each consumer $i$, with wealth $\mathbf{w}^i = \mathbf{p}^i \cdot \mathbf{e}^i$, one of the following conditions is met
+
+- *Individual Rationality.* If consumer $i$ has positive wealth, then $i$ is utility-maximizing
+
+- *Individual Quasi-Rationality.* If $i$ has no wealth, then the plan $\mathbf{x}^i$ is budget constrained (and does not necessarily maximize utility).
+
+## Results
+
+### Lemma 1
+
+In any graphical economy in which **A-1** holds, there exists a graphical quasi-equilibrium.
+
+### Lemma 2
+
+If the graph of a graphical economy is connected and if **A-1** and **A-2** hold, then for any quasi-equilibrium set of prices $\{\mathbf{p}^i\}$, it holds that every consumer has non-zero wealth.
+
+### Theorem 1
+
+For any graphical economy in which **A-1** and **A-2** hold, there exists a graphical equilibrium.
+
+## Limitations
+
+\centering
+![](fig/3.png){width=70%}
+
+\begin{align*}
+\mathbf{e}^1 = (1, 0) && \mathbf{e}^2 = (0, 0) && \mathbf{e}^3 = (0, 1) \\
+\mathbf{u}^1 = (0, 1) && \mathbf{u}^2 = (1, 1) && \mathbf{u}^3 = (1, 0)
+\end{align*}
+
+- Agent 2 has no endowment, thus no profit
+- If agent 1 or 3 profit, they try to spend profit on unavailable goods
+- If agent 1 or 3 do not profit:
+  - They must have 0 prices
+  - Agent 2 consumes an infinite amount of their good
+
+# Challenging Learning Problems and Issues
+
+---
+
+- Rational Learning in Graphical Games
+
+- No-Regret Learning in Graphical Games
+
+- Learning in Traditional AD Economies
+
+- Learning in Graphical Economics
