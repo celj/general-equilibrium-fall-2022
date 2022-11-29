@@ -1,0 +1,164 @@
+% see http://info.semprag.org/basics for a full description of this template
+\documentclass[cm,linguex]{glossa}
+
+% possible options:
+% [times] for Times font (default if no option is chosen)
+% [cm] for Computer Modern font
+% [lucida] for Lucida font (not freely available)
+% [brill] open type font, freely downloadable for non-commercial use from http://www.brill.com/about/brill-fonts; requires xetex
+% [charis] for CharisSIL font, freely downloadable from http://software.sil.org/charis/
+% for the Brill an CharisSIL fonts, you have to use the XeLatex typesetting engine (not pdfLatex)
+% for headings, tables, captions, etc., Fira Sans is used: https://www.fontsquirrel.com/fonts/fira-sans
+% [biblatex] for using biblatex (the default is natbib, do not load the natbib package in this file, it is loaded automatically via the document class glossa.cls)
+% [linguex] loads the linguex example package
+% !! a note on the use of linguex: in glossed examples, the third line of the example (the translation) needs to be prefixed with \glt. This is to allow a first line with the name of the language and the source of the example. See example (2) in the text for an illustration.
+% !! a note on the use of bibtex: for PhD dissertations to typeset correctly in the references list, the Address field needs to contain the city (for US cities in the format "Santa Cruz, CA")
+
+%\addbibresource{sample.bib}
+% the above line is for use with biblatex
+% replace this by the name of your bib-file (extension .bib is required)
+% comment out if you use natbib/bibtex
+
+\let\B\relax %to resolve a conflict in the definition of these commands between xyling and xunicode (the latter called by fontspec, called by charis)
+\let\T\relax
+\usepackage{xyling} %for trees; the use of xyling with the CharisSIL font produces poor results in the branches. This problem does not arise with the packages qtree or forest.
+\usepackage[linguistics]{forest} %for nice trees!
+\usepackage{longtable}
+
+\title[General Equilibrium]{Graphical Economics\\
+Review}
+% Optional short title inside square brackets, for the running headers.
+
+% \author[Paul \& Vanden Wyngaerd]% short form of the author names for the running header. If no short author is given, no authors print in the headers.
+% {%as many authors as you like, each separated by \AND.
+%   \spauthor{Waltraud Paul\\
+%   \institute{CNRS, CRLAO}\\
+%   \small{105, Bd. Raspail, 75005 Paris\\
+%   waltraud.paul@ehess.fr}
+%   }
+%   \AND
+%   \spauthor{Guido Vanden Wyngaerd \\
+%   \institute{KU Leuven}\\
+%   \small{Warmoesberg 26, 1000 Brussel\\
+%   guido.vandenwyngaerd@kuleuven.be}
+%   }%
+% }
+
+\author[Carlos Lezama]{
+    \spauthor{Carlos Enrique Lezama Jacinto\\
+  \institute{\hfill\break
+Instituto Tecnológico\\
+Autónomo de México}\\
+  \small{\hfill\break
+clezamaj@itam.mx}
+  }%
+  }
+
+\usepackage{natbib}
+
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+
+
+\usepackage{multirow, array}
+\setlength{\parskip}{\baselineskip}
+\newcommand{\dnorm}{\mathcal{N}}
+\newcommand{\dunif}{\mathcal{U}}
+\newcommand{\ev}{\text{E}}
+\newcommand{\iid}{\text{i.i.d.}}
+\newtheorem{cor}{Corollary}
+\newtheorem{defn}{Definition}
+\newtheorem{lem}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{rem}{Remark}
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+
+
+\sffamily
+\maketitle
+
+
+
+\rmfamily
+
+%  Body of the article
+\maketitle
+\thispagestyle{empty}
+
+\hypertarget{setting-and-background}{%
+\section{Setting and Background}\label{setting-and-background}}
+
+Text.
+
+\hypertarget{graph-theory}{%
+\subsection{Graph Theory}\label{graph-theory}}
+
+\begin{cor}[Text]
+Text.
+\end{cor}
+
+\begin{defn}[Text]
+Text.
+\end{defn}
+
+\begin{lem}[Text]
+Text.
+\end{lem}
+
+\begin{prop}[Text]
+Text.
+\end{prop}
+
+\begin{rem}[Text]
+Text.
+\end{rem}
+
+\begin{thm}[Text]
+Text.
+\end{thm}
+
+\hypertarget{the-arrowdebreu-exchange-model}{%
+\subsection{The Arrow--Debreu Exchange
+Model}\label{the-arrowdebreu-exchange-model}}
+
+Text.
+
+\hypertarget{the-kakade-kearns-ortiz-exchange-model}{%
+\subsection{The Kakade, Kearns, Ortiz Exchange
+Model}\label{the-kakade-kearns-ortiz-exchange-model}}
+
+Text.
+
+\hypertarget{graphical-equilibrium-existence}{%
+\subsection{Graphical Equilibrium
+Existence}\label{graphical-equilibrium-existence}}
+
+Text.
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+Text.
+
+\hypertarget{relevance-to-the-economic-literature}{%
+\subsection{Relevance to the Economic
+Literature}\label{relevance-to-the-economic-literature}}
+
+Text.
+
+\hypertarget{future-directions}{%
+\subsection{Future Directions}\label{future-directions}}
+
+Text.
+
+\bibliography{ref.bib}
+
+
+\end{document}

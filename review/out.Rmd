@@ -1,0 +1,85 @@
+---
+title: |
+  | Graphical Economics
+  | Review
+shorttitle: General Equilibrium
+shortauthors: Carlos Lezama
+author:
+- name: Carlos Enrique Lezama Jacinto
+  affiliation: |
+    |
+    | Instituto Tecnológico
+    | Autónomo de México
+  address: |
+    |
+    | clezamaj\@itam.mx
+classoption: [cm, linguex]
+bibliography: ref.bib
+output: 
+  rticles::glossa_article:
+    citation_package: natbib
+    includes:
+      in_header: "preamble.tex"
+---
+
+\maketitle
+\thispagestyle{empty}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Setting and Background
+
+Text.
+
+## Graph Theory
+
+\begin{cor}[Text]
+Text.
+\end{cor}
+
+\begin{defn}[Text]
+Text.
+\end{defn}
+
+\begin{lem}[Text]
+Text.
+\end{lem}
+
+\begin{prop}[Text]
+Text.
+\end{prop}
+
+\begin{rem}[Text]
+Text.
+\end{rem}
+
+\begin{thm}[Text]
+Text.
+\end{thm}
+
+## The Arrow–Debreu Exchange Model
+
+Text.
+
+## The Kakade, Kearns, Ortiz Exchange Model
+
+Text.
+
+## Graphical Equilibrium Existence
+
+Text.
+
+# Discussion
+
+Text.
+
+## Relevance to the Economic Literature
+
+Text.
+
+## Future Directions
+
+Text.
+
