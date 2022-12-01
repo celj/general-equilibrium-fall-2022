@@ -1,12 +1,99 @@
 \usepackage{multirow, array}
+\usepackage{amsmath, amsthm}
+
 \setlength{\parskip}{\baselineskip}
+
 \newcommand{\dnorm}{\mathcal{N}}
 \newcommand{\dunif}{\mathcal{U}}
 \newcommand{\ev}{\text{E}}
 \newcommand{\iid}{\text{i.i.d.}}
-\newtheorem{cor}{Corollary}
+
+\newtheoremstyle{defn}
+{}                % Space above
+{}                % Space below
+{\mdseries}        % Theorem body font % (default is "\upshape")
+{}                % Indent amount
+{\bfseries\sffamily}       % Theorem head font % (default is \mdseries)
+{.}               % Punctuation after theorem head % default: no punctuation
+{ }               % Space after theorem head
+{}                % Theorem head spec
+\theoremstyle{defn}
 \newtheorem{defn}{Definition}
-\newtheorem{lem}{Lemma}
-\newtheorem{prop}{Proposition}
-\newtheorem{rem}{Remark}
+
+\newtheoremstyle{axiom}
+{}                % Space above
+{}                % Space below
+{\mdseries}        % Theorem body font % (default is "\upshape")
+{}                % Indent amount
+{\bfseries\sffamily}       % Theorem head font % (default is \mdseries)
+{.}               % Punctuation after theorem head % default: no punctuation
+{ }               % Space after theorem head
+{}                % Theorem head spec
+\theoremstyle{axiom}
+\newtheorem{axiom}{A\!\!}
+
+\newtheoremstyle{thm}
+{}                % Space above
+{}                % Space below
+{\mdseries}        % Theorem body font % (default is "\upshape")
+{}                % Indent amount
+{\bfseries\sffamily}       % Theorem head font % (default is \mdseries)
+{.}               % Punctuation after theorem head % default: no punctuation
+{ }               % Space after theorem head
+{}                % Theorem head spec
+\theoremstyle{thm}
 \newtheorem{thm}{Theorem}
+
+\newtheoremstyle{lem}
+{}                % Space above
+{}                % Space below
+{\mdseries}        % Theorem body font % (default is "\upshape")
+{}                % Indent amount
+{\bfseries\sffamily}       % Theorem head font % (default is \mdseries)
+{.}               % Punctuation after theorem head % default: no punctuation
+{ }               % Space after theorem head
+{}                % Theorem head spec
+\theoremstyle{lem}
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheoremstyle{cor}
+{}                % Space above
+{}                % Space below
+{\mdseries}        % Theorem body font % (default is "\upshape")
+{}                % Indent amount
+{\bfseries\sffamily}       % Theorem head font % (default is \mdseries)
+{.}               % Punctuation after theorem head % default: no punctuation
+{ }               % Space after theorem head
+{}                % Theorem head spec
+\theoremstyle{cor}
+\newtheorem{cor}{Corollary}[thm]
+
+\newtheoremstyle{prop}
+{}                % Space above
+{}                % Space below
+{\mdseries}        % Theorem body font % (default is "\upshape")
+{}                % Indent amount
+{\bfseries\sffamily}       % Theorem head font % (default is \mdseries)
+{.}               % Punctuation after theorem head % default: no punctuation
+{ }               % Space after theorem head
+{}                % Theorem head spec
+\theoremstyle{prop}
+\newtheorem{prop}{Proposition}
+
+\newtheoremstyle{rmk}
+{}                % Space above
+{}                % Space below
+{\itshape}        % Theorem body font % (default is "\upshape")
+{}                % Indent amount
+{\slshape\sffamily}       % Theorem head font % (default is \mdseries)
+{.}               % Punctuation after theorem head % default: no punctuation
+{ }               % Space after theorem head
+{}                % Theorem head spec
+\theoremstyle{rmk}
+\newtheorem*{rmk}{Remark}
+
+
+
+
+
+

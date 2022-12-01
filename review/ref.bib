@@ -1,13 +1,106 @@
-@article{HAC,
+@InProceedings{KKO,
+author="Kakade, Sham M.
+and Kearns, Michael
+and Ortiz, Luis E.",
+editor="Shawe-Taylor, John
+and Singer, Yoram",
+title="Graphical Economics",
+booktitle="Learning Theory",
+year="2004",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="17--32",
+abstract="We introduce a graph-theoretic generalization of classical Arrow-Debreu economics, in which an undirected graph specifies which consumers or economies are permitted to engage in direct trade, and the graph topology may give rise to local variations in the prices of commodities. Our main technical contributions are: (1) a general existence theorem for graphical equilibria, which require local markets to clear; (2) an improved algorithm for computing approximate equilibria in standard (non-graphical) economies, which generalizes the algorithm of Deng et al. [2002] to non-linear utility functions; (3) an algorithm for computing equilibria in the graphical setting, which runs in time polynomial in the number of consumers in the special but important case in which the graph is a tree (again permitting non-linear utility functions). We also highlight many interesting learning problems that arise in our model, and relate them to learning in standard game theory and economics, graphical games, and graphical models for probabilistic inference.",
+isbn="978-3-540-27819-1"
+}
+
+@article{AD,
  ISSN = {00129682, 14680262},
- URL = {http://www.jstor.org/stable/1913610},
- author = {Whitney K. Newey and Kenneth D. West},
+ URL = {http://www.jstor.org/stable/1907353},
+ abstract = {A. Wald has presented a model of production and a model of exchange and proofs of the existence of an equilibrium for each of them. Here proofs of the existence of an equilibrium are given for an integrated model of production, exchange and consumption. In addition the assumptions made on the technologies of producers and the tastes of consumers are significantly weaker than Wald's. Finally a simplification of the structure of the proofs has been made possible through use of the concept of an abstract economy, a generalization of that of a game.},
+ author = {Kenneth J. Arrow and Gerard Debreu},
  journal = {Econometrica},
  number = {3},
- pages = {703--708},
+ pages = {265--290},
  publisher = {[Wiley, Econometric Society]},
- title = {A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix},
- urldate = {2022-11-13},
- volume = {55},
- year = {1987}
+ title = {Existence of an Equilibrium for a Competitive Economy},
+ urldate = {2022-11-30},
+ volume = {22},
+ year = {1954}
 }
+
+@article{Kearns,
+  author    = {Michael J. Kearns and
+               Michael L. Littman and
+               Satinder Singh},
+  title     = {Graphical Models for Game Theory},
+  journal   = {CoRR},
+  volume    = {abs/1301.2281},
+  year      = {2013},
+  url       = {http://arxiv.org/abs/1301.2281},
+  eprinttype = {arXiv},
+  eprint    = {1301.2281},
+  timestamp = {Tue, 19 Apr 2022 16:03:28 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1301-2281.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{resale,
+	doi = {10.1145/3465456.3467628},
+  
+	url = {https://doi.org/10.1145%2F3465456.3467628},
+  
+	year = 2021,
+	month = {jul},
+  
+	publisher = {{ACM}
+},
+  
+	author = {Gabriel Andrade and Rafael Frongillo and Sharadha Srinivasan and Elliot Gorokhovsky},
+  
+	title = {Graphical Economies with Resale},
+  
+	booktitle = {Proceedings of the 22nd {ACM} Conference on Economics and Computation}
+}
+
+@techreport{naive,
+ title = "Naive Learning with Uninformed Agents",
+ author = "Banerjee, Abhijit and Breza, Emily and Chandrasekhar, Arun G and Mobius, Markus",
+ institution = "National Bureau of Economic Research",
+ type = "Working Paper",
+ series = "Working Paper Series",
+ number = "25497",
+ year = "2019",
+ month = "January",
+ doi = {10.3386/w25497},
+ URL = "http://www.nber.org/papers/w25497",
+ abstract = {The DeGroot model has emerged as a credible alternative to the standard Bayesian model for studying learning on networks, offering a natural way to model naive learning in a complex setting. One unattractive aspect of this model is the assumption that the process starts with every node in the network having a signal. We study a natural extension of the DeGroot model that can deal with sparse initial signals. We show that an agent's social influence in this generalized DeGroot model is essentially proportional to the number of uninformed nodes who will hear about an event for the first time via this agent. This characterization result then allows us to relate network geometry to information aggregation. We identify an example of a network structure where essentially only the signal of a single agent is aggregated, which helps us pinpoint a condition on the network structure necessary for almost full aggregation. We then simulate the modeled learning process on a set of real world networks; for these networks there is on average 21.6% information loss. We also explore how correlation in the location of seeds can exacerbate aggregation failure. Simulations with real world network data show that with clustered seeding, information loss climbs to 35%.},
+}
+
+@article{degroot,
+ ISSN = {01621459},
+ URL = {http://www.jstor.org/stable/2285509},
+ abstract = {Consider a group of individuals who must act together as a team or committee, and suppose that each individual in the group has his own subjective probability distribution for the unknown value of some parameter. A model is presented which describes how the group might reach agreement on a common subjective probability distribution for the parameter by pooling their individual opinions. The process leading to the consensus is explicitly described and the common distribution that is reached is explicitly determined. The model can also be applied to problems of reaching a consensus when the opinion of each member of the group is represented simply as a point estimate of the parameter rather than as a probability distribution.},
+ author = {Morris H. DeGroot},
+ journal = {Journal of the American Statistical Association},
+ number = {345},
+ pages = {118--121},
+ publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+ title = {Reaching a Consensus},
+ urldate = {2022-11-30},
+ volume = {69},
+ year = {1974}
+}
+
+@article{learn,
+Author = {Golub, Benjamin and Jackson, Matthew O.},
+Title = {Naïve Learning in Social Networks and the Wisdom of Crowds},
+Journal = {American Economic Journal: Microeconomics},
+Volume = {2},
+Number = {1},
+Year = {2010},
+Month = {February},
+Pages = {112-49},
+DOI = {10.1257/mic.2.1.112},
+URL = {https://www.aeaweb.org/articles?id=10.1257/mic.2.1.112}}
+
